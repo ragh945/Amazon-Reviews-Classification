@@ -20,8 +20,8 @@ st.image(Amazon)
 st.title("Amazon Reviews Classification")
 
 # Load the pre-trained model and vectorizer
-model_path = r"C:\Users\RAGHAVENDRA KUMAR\ML\NLP\amazon_reviews.pkl"
-vectorizer_path = r"C:\Users\RAGHAVENDRA KUMAR\ML\NLP\amazon_tfidf.pkl"
+model_path = "amazon_reviews.pkl"
+vectorizer_path = "amazon_tfidf.pkl"
 
 with open(model_path, 'rb') as model_file:
     model = pickle.load(model_file)
