@@ -9,11 +9,11 @@ import numpy as np
 from wordcloud import WordCloud, STOPWORDS
 
 
-Inno = Image.open(r"C:\Users\RAGHAVENDRA KUMAR\OneDrive\Pictures\Inno (2).jpeg")
+Inno = Image.open("Inno (2).jpeg")
 st.image(Inno)
 # Correct file paths for images
 
-Amazon = Image.open(r"C:\Users\RAGHAVENDRA KUMAR\Downloads\Amazon.jpeg")
+Amazon = Image.open("Amazon.jpeg")
 st.image(Amazon)
 # Display the image using Streamlit's image function
 #st.image(vk, use_column_width=False)
@@ -41,11 +41,11 @@ comment = st.text_input("Enter your Review:")
 if st.button("Submit"):
     data = Bagw.transform([comment]).toarray()
     pred = model.predict(data)[0]
-    star1=Image.open(r"C:\Users\RAGHAVENDRA KUMAR\Downloads\1 star.jpg")
-    star2=Image.open(r"C:\Users\RAGHAVENDRA KUMAR\Downloads\2 star.jpg")
-    star3=Image.open(r"C:\Users\RAGHAVENDRA KUMAR\Downloads\3star.jpg")
-    star4=Image.open(r"C:\Users\RAGHAVENDRA KUMAR\Downloads\4 star.jpg")
-    star5=Image.open(r"C:\Users\RAGHAVENDRA KUMAR\Downloads\5star.jpg")
+    star1=Image.open("1 star.jpg")
+    star2=Image.open("2 star.jpg")
+    star3=Image.open("3star.jpg")
+    star4=Image.open("4 star.jpg")
+    star5=Image.open("5star.jpg")
     if pred==1:
         st.image(star1)
     elif pred==2:
