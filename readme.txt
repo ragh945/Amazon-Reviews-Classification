@@ -1,16 +1,42 @@
-Amazon Review Full Score Dataset
+# Amazon Reviews Classification
+## Project Objective
+The objective of this project is to develop a classification model to predict the rating of Amazon reviews based on their textual content. The ratings range from 1 to 5 stars. This model utilizes Natural Language Processing (NLP) techniques to analyze the comments and predict the corresponding rating.
 
-Version 3, Updated 09/09/2015
-
-ORIGIN
-
-The Amazon reviews dataset consists of reviews from amazon. The data span a period of 18 years, including ~35 million reviews up to March 2013. Reviews include product and user information, ratings, and a plaintext review. For more information, please refer to the following paper: J. McAuley and J. Leskovec. Hidden factors and hidden topics: understanding rating dimensions with review text. RecSys, 2013.
-
-The Amazon reviews full score dataset is constructed by Xiang Zhang (xiang.zhang@nyu.edu) from the above dataset. It is used as a text classification benchmark in the following paper: Xiang Zhang, Junbo Zhao, Yann LeCun. Character-level Convolutional Networks for Text Classification. Advances in Neural Information Processing Systems 28 (NIPS 2015).
+# Deployment Link : https://amazon-reviews-classification-srlubcdcwkhzyctxplsqvu.streamlit.app/
 
 
-DESCRIPTION
 
-The Amazon reviews full score dataset is constructed by randomly taking 600,000 training samples and 130,000 testing samples for each review score from 1 to 5. In total there are 3,000,000 trainig samples and 650,000 testing samples.
+## Libraries Used
+- Streamlit: For building the interactive web application.
+- Pickle: For loading pre-trained models and vectorizers.
+- Pandas: For data manipulation and processing.
+- Matplotlib & Seaborn: For data visualization (optional).
+- WordCloud: For visualizing the most frequent words in the reviews.
+- Scikit-learn: For machine learning algorithms and text vectorization.
+- Pillow: For handling image processing.
 
-The files train.csv and test.csv contain all the training samples as comma-sparated values. There are 3 columns in them, corresponding to class index (1 to 5), review title and review text. The review title and text are escaped using double quotes ("), and any internal double quote is escaped by 2 double quotes (""). New lines are escaped by a backslash followed with an "n" character, that is "\n".
+## Features
+- Text Input: Users can enter an Amazon review text.
+- Rating Prediction: The model predicts the rating based on the review text.
+- Visual Output: Displays an image corresponding to the predicted rating (1 to 5 stars).
+
+## Model Details
+- Algorithm: Random Forest Classifier
+- Text Vectorization: TF-IDF Vectorizer is used to convert text data into numerical features.
+
+## Data Preprocessing
+### Text Preprocessing:
+- Tokenization: Splitting text into individual words.
+- Removal of stop words: Filtering out common words that do not contribute to the meaning of the review.
+- Lowercasing: Converting all text to lowercase to maintain uniformity.
+- Stemming/Lemmatization: Reducing words to their base or root form.
+
+## TF-IDF Vectorization:
+- Transforms text data into numerical feature vectors that represent the importance of words in the reviews relative to the corpus.
+
+## Train-Test Split:
+- The dataset is split into training and testing subsets to evaluate the performance of the model.
+
+
+# Conclusion:
+This project demonstrates the application of Natural Language Processing (NLP) for classifying Amazon reviews based on their textual content. By leveraging a Random Forest Classifier and TF-IDF Vectorization, the model is able to accurately predict review ratings from 1 to 5 stars. The interactive Streamlit application provides a user-friendly interface for real-time classification, making it easy to analyze and visualize sentiment in reviews.
