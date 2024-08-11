@@ -19,11 +19,6 @@ st.image(Amazon)
 #st.image(vk, use_column_width=False)
 st.title("Amazon Reviews Classification")
 
-# Load the CSV file
-df = pd.read_csv(r"C:\Users\RAGHAVENDRA KUMAR\ML\NLP\VK_final.csv")
-
-
-
 # Load the pre-trained model and vectorizer
 model_path = r"C:\Users\RAGHAVENDRA KUMAR\ML\NLP\amazon_reviews.pkl"
 vectorizer_path = r"C:\Users\RAGHAVENDRA KUMAR\ML\NLP\amazon_tfidf.pkl"
