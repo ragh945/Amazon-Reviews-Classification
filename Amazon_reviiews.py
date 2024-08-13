@@ -9,7 +9,7 @@ import numpy as np
 from wordcloud import WordCloud, STOPWORDS
 
 
-Inno = Image.open("Inno (2).jpeg")
+Inno = Image.open("Inno1.jpg")
 st.image(Inno)
 # Correct file paths for images
 
