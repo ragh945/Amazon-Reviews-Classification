@@ -10,7 +10,7 @@ from wordcloud import WordCloud, STOPWORDS
 
 
 Inno = Image.open("Inno1.jpg")
-st.image(Inno)
+st.image(Inno,use_column_width=True)
 # Correct file paths for images
 
 Amazon = Image.open("Amazon.jpeg")
